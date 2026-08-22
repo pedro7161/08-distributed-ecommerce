@@ -1,0 +1,1 @@
+package dev.pedro.learning.ecommerce.payment.provider;public record ProviderPaymentResponse(boolean success,String providerReference,String message){public static ProviderPaymentResponse failed(String message){return new ProviderPaymentResponse(false,null,message);}}

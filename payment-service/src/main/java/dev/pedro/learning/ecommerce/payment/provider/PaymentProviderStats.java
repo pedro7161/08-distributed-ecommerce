@@ -1,0 +1,1 @@
+package dev.pedro.learning.ecommerce.payment.provider;public record PaymentProviderStats(PaymentProviderMode mode,int providerCalls,int providerSuccesses,int providerFailures,int gatewayFallbacks,int failFirstN,long delayMs,int failurePercentage){}

@@ -1,0 +1,1 @@
+package dev.pedro.learning.ecommerce.payment.event; import java.math.BigDecimal;import java.util.UUID;public record StockReservedPayload(UUID orderId,UUID productId,int quantity,BigDecimal totalAmount,String customerEmail){}

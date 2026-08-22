@@ -1,0 +1,1 @@
+package dev.pedro.learning.ecommerce.payment.provider;public enum PaymentProviderMode{NORMAL,DECLINE,ALWAYS_FAIL,SLOW,FAIL_FIRST_N_ATTEMPTS,FAIL_PERCENTAGE}

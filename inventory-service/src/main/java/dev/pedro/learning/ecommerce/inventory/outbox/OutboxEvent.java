@@ -1,0 +1,3 @@
+package dev.pedro.learning.ecommerce.inventory.outbox;
+import com.fasterxml.jackson.databind.JsonNode; import io.quarkus.hibernate.orm.panache.PanacheEntityBase; import jakarta.persistence.*; import org.hibernate.annotations.JdbcTypeCode; import org.hibernate.type.SqlTypes; import java.time.Instant; import java.util.UUID;
+@Entity @Table(name="outbox_event") public class OutboxEvent extends PanacheEntityBase { @Id public UUID id; @Column(name="aggregate_type",nullable=false) public String aggregateType; @Column(name="aggregate_id",nullable=false) public String aggregateId; @Column(nullable=false) public String type; @JdbcTypeCode(SqlTypes.JSON) @Column(nullable=false) public JsonNode payload; @Column(name="occurred_at",nullable=false) public Instant occurredAt; }

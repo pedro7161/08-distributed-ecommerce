@@ -1,0 +1,1 @@
+package dev.pedro.learning.ecommerce.notification.event;import java.time.Instant;public record NotificationFailedPayload(RawEventEnvelope originalEvent,String error,int attempts,Instant failedAt){}

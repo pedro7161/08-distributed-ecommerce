@@ -1,0 +1,1 @@
+package dev.pedro.learning.ecommerce.payment.provider;import java.math.BigDecimal;import java.util.UUID;public record ProviderPaymentRequest(UUID orderId,BigDecimal amount,String idempotencyKey){}

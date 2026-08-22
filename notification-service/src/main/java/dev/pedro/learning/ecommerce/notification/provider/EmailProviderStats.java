@@ -1,0 +1,1 @@
+package dev.pedro.learning.ecommerce.notification.provider;public record EmailProviderStats(EmailProviderMode mode,int calls,int successes,int failures,int failFirstN,long delayMs){}

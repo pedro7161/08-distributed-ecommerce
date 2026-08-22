@@ -1,0 +1,1 @@
+package dev.pedro.learning.ecommerce.notification.provider;public enum EmailProviderMode{NORMAL,ALWAYS_FAIL,FAIL_FIRST_N_ATTEMPTS,SLOW}

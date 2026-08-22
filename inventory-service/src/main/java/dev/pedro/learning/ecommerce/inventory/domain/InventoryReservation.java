@@ -1,0 +1,3 @@
+package dev.pedro.learning.ecommerce.inventory.domain;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase; import jakarta.persistence.*; import java.time.Instant; import java.util.UUID;
+@Entity @Table(name="inventory_reservation") public class InventoryReservation extends PanacheEntityBase { @Id public UUID id; @Column(name="order_id",nullable=false,unique=true) public UUID orderId; @Column(name="product_id",nullable=false) public UUID productId; @Column(nullable=false) public int quantity; @Enumerated(EnumType.STRING) @Column(nullable=false) public ReservationStatus status; @Column(name="created_at",nullable=false) public Instant createdAt; @Column(name="released_at") public Instant releasedAt; }

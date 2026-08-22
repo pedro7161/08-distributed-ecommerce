@@ -1,0 +1,1 @@
+package dev.pedro.learning.ecommerce.payment.domain;public enum PaymentStatus{COMPLETED,FAILED}

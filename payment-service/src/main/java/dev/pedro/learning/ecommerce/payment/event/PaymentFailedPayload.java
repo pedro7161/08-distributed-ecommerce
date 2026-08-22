@@ -1,0 +1,1 @@
+package dev.pedro.learning.ecommerce.payment.event;import java.util.UUID;public record PaymentFailedPayload(UUID orderId,UUID paymentId,String reason){}

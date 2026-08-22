@@ -1,0 +1,3 @@
+CREATE TABLE payment(id UUID PRIMARY KEY,order_id UUID NOT NULL UNIQUE,amount NUMERIC(19,2) NOT NULL,status VARCHAR(32) NOT NULL,provider_reference VARCHAR(255),failure_reason VARCHAR(500),created_at TIMESTAMPTZ NOT NULL);
+CREATE TABLE inbox_event(event_id UUID PRIMARY KEY,event_type VARCHAR(128) NOT NULL,received_at TIMESTAMPTZ NOT NULL,processed_at TIMESTAMPTZ);
+CREATE TABLE outbox_event(id UUID PRIMARY KEY,aggregate_type VARCHAR(128) NOT NULL,aggregate_id VARCHAR(128) NOT NULL,type VARCHAR(128) NOT NULL,payload JSONB NOT NULL,occurred_at TIMESTAMPTZ NOT NULL);
